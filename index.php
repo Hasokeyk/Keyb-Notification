@@ -1,5 +1,6 @@
 <?php 
-
+	echo 'başarılı';
+	/*
 	require "keyb.notification.php";
 	
 	$bildirim = new notification();
@@ -49,3 +50,4 @@
 		}
 		
 	}
+	*/
