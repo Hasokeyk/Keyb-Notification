@@ -8,7 +8,7 @@
 		
 	*/
 	
-	$guvenlik = 'hasan'; //LÜTFEN BURAYa KENDİNİZE AİT BİR GÜVENLİK KODU GİRİNİZ
+	$guvenlik = 'hasan'; //LÜTFEN BURAYA KENDİNİZE AİT BİR GÜVENLİK KODU GİRİNİZ
 	
 	class notification {
 		
@@ -153,3 +153,5 @@
 	   }
 		
 	}
+
+?>

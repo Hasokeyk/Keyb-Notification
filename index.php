@@ -16,11 +16,10 @@
 	
 	//Okunmamış olan Bildirimleri listeletiyoruz
 	if(isset($_GET['durum'],$_POST['kime'],$_POST['guvenlik']) and !empty($_GET['durum'])){
-		
+		/*
 		$durum = trim(strip_tags($_GET['durum']));
 		$kime = trim(strip_tags($_POST['kime']));
 		$postguvenlik = trim(strip_tags($_POST['guvenlik']));
-		
 		
 		if($durum=='listele'){
 			
@@ -57,6 +56,6 @@
 			$bildirim->bildirimkayit($degerler);
 			
 		}
-		
+		*/
 	}
 	
