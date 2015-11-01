@@ -93,7 +93,7 @@
 			//Güvenlik Kontrol
 			if($degerler['guvenlik']==$this->guvenlik){
 				
-				$satirlar = file('bildirimler/'.$degerler['kime'].'.txt');
+				$satirlar = file('bildirimler/'.$degerler['kimden'].'.txt');
 				$sonveri = json_decode(end($satirlar));
 				
 				if($sonveri->okunma=='0'){

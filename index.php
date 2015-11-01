@@ -12,18 +12,14 @@
 	
 	require "keyb.notification.php";
 	
-	//Klasör kontrol
-	if(file_exists('bildirimler')===false){
-		mkdir('bildirimler',0777);
-	}
-	
 	$bildirim = new notification();
 	
 	//Okunmamış olan Bildirimleri listeletiyoruz
-	if(isset($_GET['durum'],$_POST['kime'],$_POST['guvenlik']) and !empty($_GET['durum'])){
+	if(isset($_GET['durum'],$_POST['kime'],$_POST['kimden'],$_POST['guvenlik']) and !empty($_GET['durum'])){
 		
 		$durum = trim(strip_tags($_GET['durum']));
 		$kime = trim(strip_tags($_POST['kime']));
+		$kimden = trim(strip_tags($_POST['kimden']));
 		$postguvenlik = trim(strip_tags($_POST['guvenlik']));
 		
 		if($durum=='listele'){
@@ -36,9 +32,9 @@
 			$bildirim->bildirimlistele($degerler);
 			
 		}else if($durum=='sonbildirim'){
-			
+						
 			$degerler = array(
-				'kime' => $kime,
+				'kimden' => $kimden,
 				'guvenlik' => $postguvenlik,
 			);
 			
@@ -47,7 +43,6 @@
 		}else if($durum=='bildirimkayitet' and isset($_POST['bildirim'],$_POST['kime'],$_POST['guvenlik'],$_POST['kimden'])){
 			
 			$bildirimy = trim(strip_tags($_POST['bildirim']));
-			$kimden = trim(strip_tags($_POST['kimden']));
 			
 			$degerler = array(
 				'bildirim' => $bildirimy,
