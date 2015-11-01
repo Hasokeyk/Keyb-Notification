@@ -134,7 +134,7 @@
 			//Güvenlik Kontrol
 			if($degerler['guvenlik']==$this->guvenlik){
 				
-				unset('bildirimler/'.$degerler['kime'].'.txt');
+				unlink('bildirimler/'.$degerler['kime'].'.txt');
 				
 			}else{
 				$this->hata = 'Güvenlik Hatası';
