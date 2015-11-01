@@ -92,12 +92,16 @@
 			
 			//Güvenlik Kontrol
 			if($degerler['guvenlik']==$this->guvenlik){
-				
-				$satirlar = file('bildirimler/'.$degerler['kimden'].'.txt');
-				$sonveri = json_decode(end($satirlar));
-				
-				if($sonveri->okunma=='0'){
-					$this->listele[] = json_decode(end($satirlar));
+				if(file_exists('bildirimler/'.$degerler['kimden'].'.txt')){
+					$satirlar = file('bildirimler/'.$degerler['kimden'].'.txt');
+					$sonveri = json_decode(end($satirlar));
+					
+					if($sonveri->okunma=='0'){
+						$this->listele[] = json_decode(end($satirlar));
+					}else{
+						$this->listele[] = 'yok';
+					}
+					
 				}else{
 					$this->listele[] = 'yok';
 				}
