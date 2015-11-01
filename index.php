@@ -1,6 +1,15 @@
 <?php 
-	echo 'başarılı';
-	/*
+	
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	
+	header('Access-Control-Allow-Origin: *');
+	header('Content-type: application/x-javascript');
+    header("Access-Control-Allow-Credentials: true");
+    header('Access-Control-Allow-Methods: GET, PUT, POST, DELETE, OPTIONS');
+    header('Access-Control-Max-Age: 1000');
+    header('Access-Control-Allow-Headers: Content-Type, Content-Range, Content-Disposition, Content-Description');
+	
 	require "keyb.notification.php";
 	
 	$bildirim = new notification();
