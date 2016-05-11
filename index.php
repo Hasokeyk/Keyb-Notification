@@ -17,10 +17,10 @@
 	//Okunmamış olan Bildirimleri listeletiyoruz
 	if(isset($_GET['durum'],$_POST['kime'],$_POST['kimden'],$_POST['guvenlik']) and !empty($_GET['durum'])){
 		
-		$durum = trim(strip_tags($_GET['durum']));
-		$kime = trim(strip_tags($_POST['kime']));
-		$kimden = trim(strip_tags($_POST['kimden']));
-		$postguvenlik = trim(strip_tags($_POST['guvenlik']));
+		$durum = trim(strip_tags(htmlspecialchars($_GET['durum'])));
+		$kime = trim(strip_tags(htmlspecialchars($_POST['kime'])));
+		$kimden = trim(strip_tags(htmlspecialchars($_POST['kimden'])));
+		$postguvenlik = trim(strip_tags(htmlspecialchars($_POST['guvenlik'])));
 		
 		if($durum=='listele'){
 			
@@ -42,7 +42,7 @@
 			
 		}else if($durum=='bildirimkayitet' and isset($_POST['bildirim'],$_POST['kime'],$_POST['guvenlik'],$_POST['kimden'])){
 			
-			$bildirimy = trim(strip_tags($_POST['bildirim']));
+			$bildirimy = trim(strip_tags(htmlspecialchars($_POST['bildirim'])));
 			
 			$degerler = array(
 				'bildirim' => $bildirimy,

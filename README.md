@@ -10,7 +10,7 @@ Bu eklenti ile kendi sunucunuzu yormadan başka bir sunucu ile anlık bildirim s
 
 # AJAX İLE VERİ ÇEKME
 
-<pre>
+```javascript
 var sonbildirim = '';
 setInterval(function(){
 	var kime = 'hasan';
@@ -38,7 +38,7 @@ setInterval(function(){
 		}  
 	});
 },1000);
-</pre>
+```
 
 Yukarıdaki ajax kodu ile her 1sn de bir oluşturduğunuz domaine sorgu yaparak son yollanan bildirimi alır.
 
@@ -49,7 +49,7 @@ Yukarıdaki ajax kodu ile her 1sn de bir oluşturduğunuz domaine sorgu yaparak 
 
 # AJAX VERİ YOLLAMA
 
-<pre>
+```javascript
 var bildirimal = 'test bildirim';
 var kime = 'hasan';
 var kimden = 'hasokeyk';
@@ -71,7 +71,7 @@ $.ajax({
 		//console.log(textStatus);  
 	}  
 });
-</pre>
+```
 
 ## Değiştirmeniz gereken yerler
 1. -{HEROKU SİTENİZİN ADRESİ}- yazan yere oluşturduğunuz domain adresi gelecek
